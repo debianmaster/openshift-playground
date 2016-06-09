@@ -12,7 +12,7 @@ cd openshift-playground
 > RHEL 7.1 Vagrant box for VirtualBox  ---- Download this 
 
  
-## Name download image as rhel7 
+# Name download image as rhel7 
 ```sh
 downloadVBox.sh
 ```
