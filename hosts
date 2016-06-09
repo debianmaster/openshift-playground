@@ -1,0 +1,43 @@
+[OSEv3:children]
+masters
+nodes
+etcd
+lb
+router
+
+# Set variables common for all OSEv3 hosts
+[OSEv3:vars]
+
+# SSH user, this user should allow ssh based auth without requiring a password
+ansible_ssh_user=vagrant
+osm_default_subdomain=master
+openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/htpasswd'}]
+
+
+
+# If ansible_ssh_user is not root, ansible_sudo must be set to true
+ansible_sudo=true
+
+deployment_type=enterprise
+
+# host group for masters
+[masters]
+master1 openshift_public_hostname=master1  openshift_ip=192.168.33.10  openshift_public_ip=192.168.33.10 openshift_hostname=master1
+
+
+# host group for nodes
+[nodes]
+master1 openshift_public_hostname=master1  openshift_ip=192.168.33.10  openshift_public_ip=192.168.33.10 openshift_hostname=master1
+#node1  openshift_public_hostname=node1 openshift_ip=192.168.33.11 openshift_public_ip=192.168.33.11 openshift_hostname=node1
+#node2  openshift_public_hostname=node2 openshift_ip=192.168.33.12 openshift_public_ip=192.168.33.12 openshift_hostname=node2
+
+# host group for etcd
+[etcd]
+master1
+
+[lb]
+master1
+
+
+[router]
+master1

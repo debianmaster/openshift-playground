@@ -1,20 +1,9 @@
-cd master1
-vagrant up
-cd ..
+declare -a arr=("master1" "node1" "node2")
 
-cd master2
-vagrant up
-cd ..
-
-cd master3
-vagrant up
-cd ..
-
-cd node1
-vagrant up
-cd ..
-
-cd node2
-vagrant up
-cd ..
- 
+## now loop through the above array
+for i in "${arr[@]}"
+do
+ cd $i
+ vagrant up
+ cd ..
+done
