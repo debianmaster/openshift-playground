@@ -22,14 +22,14 @@ deployment_type=enterprise
 
 # host group for masters
 [masters]
-master1 openshift_public_hostname=master1  openshift_ip=192.168.33.10  openshift_public_ip=192.168.33.10 openshift_hostname=master1
+master1 openshift_public_hostname=master1  openshift_ip=192.168.11.10  openshift_public_ip=192.168.11.10 openshift_hostname=master1
 
 
 # host group for nodes
 [nodes]
-master1 openshift_public_hostname=master1  openshift_ip=192.168.33.10  openshift_public_ip=192.168.33.10 openshift_hostname=master1
-#node1  openshift_public_hostname=node1 openshift_ip=192.168.33.11 openshift_public_ip=192.168.33.11 openshift_hostname=node1
-#node2  openshift_public_hostname=node2 openshift_ip=192.168.33.12 openshift_public_ip=192.168.33.12 openshift_hostname=node2
+master1 openshift_public_hostname=master1  openshift_ip=192.168.11.10  openshift_public_ip=192.168.11.10 openshift_hostname=master1
+#node1  openshift_public_hostname=node1 openshift_ip=192.168.11.11 openshift_public_ip=192.168.11.11 openshift_hostname=node1
+#node2  openshift_public_hostname=node2 openshift_ip=192.168.11.12 openshift_public_ip=192.168.11.12 openshift_hostname=node2
 
 # host group for etcd
 [etcd]
